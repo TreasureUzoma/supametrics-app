@@ -12,7 +12,7 @@ export const Header = () => {
 	];
 
 	return (
-		<header className="sticky top-0 z-50 flex items-center justify-between z-50 py-4 md:py-[0.6rem] bg-bright dark:bg-black border-b border-neutral-200 dark:border-neutral-900">
+		<header className="sticky top-0 z-50 flex items-center justify-between py-4 md:py-[0.6rem] bg-bright dark:bg-black border-b border-neutral-200 dark:border-neutral-900">
 			<div className="flex_center w-full">
 				<div className="flex_between fixed_width">
 					<div className="flex_center gap-12">

@@ -1,51 +1,122 @@
-[![GitHub][opengraph-image]][opengraph-image-url]
+# **Supametrics** 🚀
 
-# shadcn/ui and tailwindcss v4 monorepo template
+Privacy-first web analytics, putting _you_ in control! A lightweight and open-source alternative to Google Analytics. Built for self-hosting, GDPR compliance, and full data ownership. ✨
 
-This template is for creating a monorepo with Turborepo, shadcn/ui, tailwindcss v4, and react v19.
+## 💻 Installation
 
-## One-click Deploy
+Get started with Supametrics in a few easy steps!
 
-You can deploy this template to Vercel with the button below:
+- **Clone the Repository:**
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?build-command=cd+..%2F..%2F+%26%26+pnpm+turbo+build+--filter%3Dweb...&demo-description=This+is+a+template+Turborepo+with+ShadcnUI+tailwindv4&demo-image=%2F%2Fimages.ctfassets.net%2Fe5382hct74si%2F2JxNyYATuuV7WPuJ31kF9Q%2F433990aa4c8e7524a9095682fb08f0b1%2FBasic.png&demo-title=Turborepo+%26+Next.js+Starter&demo-url=https%3A%2F%2Fexamples-basic-web.vercel.sh%2F&from=templates&project-name=Turborepo+%26+Next.js+Starter&repository-name=turborepo-shadcn-tailwind&repository-url=https%3A%2F%2Fgithub.com%2Flinkb15%2Fturborepo-shadcn-ui-tailwind-4&root-directory=apps%2Fweb&skippable-integrations=1)
+  ```bash
+  git clone https://github.com/supametrics/supametrics-app
+  ```
 
-## Usage
+- **Navigate to the Project Directory:**
 
-in the root directory run:
+  ```bash
+  cd supametrics-ui
+  ```
 
-```bash
-pnpm install
-pnpm dev
-```
+- **Install Dependencies:**
 
-## Adding components
+  ```bash
+  pnpm install
+  ```
 
-To add components to your app, run the following command at the root of your `web` app:
+- **Start the Development Server:**
+  ```bash
+  pnpm dev
+  ```
 
-```bash
-pnpm dlx shadcn@canary add button -c apps/web
-```
+## 🚀 Usage
 
-This will place the ui components in the `packages/ui/src/components` directory.
+### Setting up the environment
 
-## Tailwind
+To get started, ensure you have all the necessary environment variables set up correctly. Here’s how:
 
-Your `globals.css` are already set up to use the components from the `ui` package which is imported in the `web` app.
+<details>
+<summary>Expand for detailed instructions</summary>
 
-## Using components
+1.  **Create a `.env` file** in the root directory.
 
-To use the components in your app, import them from the `ui` package.
+2.  **Add the following environment variables:**
 
-```tsx
-import { Button } from '@workspace/ui/components/ui/button';
-```
+    ```
+    NEXT_PUBLIC_BASE_URL=http://localhost:3000
+    ```
 
-## More Resources
+    Feel free to configure other environment variables as needed.
 
-- [shadcn/ui - Monorepo](https://ui.shadcn.com/docs/monorepo)
-- [Turborepo - shadcn/ui](https://turbo.build/repo/docs/guides/tools/shadcn-ui)
-- [TailwindCSS v4 - Explicitly Registering Sources](https://tailwindcss.com/docs/detecting-classes-in-source-files#explicitly-registering-sources)
+</details>
 
-[opengraph-image]: https://turborepo-shadcn-tailwind.vercel.app/opengraph-image.png
-[opengraph-image-url]: https://turborepo-shadcn-tailwind.vercel.app/
+### Running the application
+
+1.  After setting up the environment, start the development server:
+
+    ```bash
+    pnpm dev
+    ```
+
+2.  Open your browser and navigate to `http://localhost:3000` to see Supametrics UI in action!
+
+![Supametrics Screenshot](https://via.placeholder.com/800x400)
+
+## ✨ Features
+
+- 📊 **Real-time Analytics**: Track your website's performance with up-to-the-minute data.
+- 🔒 **Privacy-Focused**: GDPR compliance and no cookies for user privacy.
+- 🌐 **Self-Hosting**: Full control over your data with easy self-hosting.
+- 🚀 **Lightweight**: Less than 2KB for minimal impact on page load times.
+- 🎨 **Customizable**: Tailor the UI to match your brand and preferences.
+
+## 🛠️ Technologies Used
+
+| Technology               | Link                                                                                                           |
+| :----------------------- | :------------------------------------------------------------------------------------------------------------- |
+| TypeScript               | [https://www.typescriptlang.org/](https://www.typescriptlang.org/)                                             |
+| Next.js                  | [https://nextjs.org/](https://nextjs.org/)                                                                     |
+| Tailwind CSS             | [https://tailwindcss.com/](https://tailwindcss.com/)                                                           |
+| Shadcn UI                | [https://ui.shadcn.com/](https://ui.shadcn.com/)                                                               |
+| pnpm                     | [https://pnpm.io/](https://pnpm.io/)                                                                           |
+| Framer Motion            | [https://www.framer.com/motion/](https://www.framer.com/motion/)                                               |
+| Lucide React             | [https://lucide.dev/](https://lucide.dev/)                                                                     |
+| Next Themes              | [https://github.com/pacocoursey/next-themes](https://github.com/pacocoursey/next-themes)                       |
+| Radix UI                 | [https://www.radix-ui.com/](https://www.radix-ui.com/)                                                         |
+| Class Variance Authority | [https://cva.style/](https://cva.style/)                                                                       |
+| ESLint                   | [https://eslint.org/](https://eslint.org/)                                                                     |
+| Prettier                 | [https://prettier.io/](https://prettier.io/)                                                                   |
+| Turbo                    | [https://turbo.build/](https://turbo.build/)                                                                   |
+| Zod                      | [https://zod.dev/](https://zod.dev/)                                                                           |
+| Classnames               | [https://github.com/JedWatson/classnames](https://github.com/JedWatson/classnames)                             |
+| Tailwind Merge           | [https://github.com/dcastil/tailwind-merge](https://github.com/dcastil/tailwind-merge)                         |
+| Typescript Eslint        | [https://typescript-eslint.io/](https://typescript-eslint.io/)                                                 |
+| only-warn                | [https://github.com/nickdecker/eslint-plugin-only-warn](https://github.com/nickdecker/eslint-plugin-only-warn) |
+
+## 🤝 Contributing
+
+We welcome contributions to Supametrics UI! Here's how you can help:
+
+- 🐛 **Report Bugs**: Help us identify and fix issues.
+- 🛠️ **Suggest Features**: Propose new features and improvements.
+- ✍️ **Submit Pull Requests**: Contribute code changes to enhance the project.
+
+## 📜 License
+
+This project is under the [MIT License](LICENSE).
+
+## 🧑‍💻 Author Info
+
+- Charles:
+  - [Website](https://example.com)
+  - [Twitter](https://twitter.com/yourtwitter)
+  - [GitHub](https://github.com/yourgithub)
+
+## 🛡️ Badges
+
+[![TypeScript](https://img.shields.io/badge/Language-TypeScript-blue.svg)](https://www.typescriptlang.org/)
+[![Next.js](https://img.shields.io/badge/Framework-Next.js-black.svg)](https://nextjs.org/)
+[![Tailwind CSS](https://img.shields.io/badge/Style-Tailwind%20CSS-blue.svg)](https://tailwindcss.com/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+[![Readme was generated by Dokugen](https://img.shields.io/badge/Readme%20was%20generated%20by-Dokugen-brightgreen)](https://www.npmjs.com/package/dokugen)
