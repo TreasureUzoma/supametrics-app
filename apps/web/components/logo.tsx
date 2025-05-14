@@ -5,7 +5,7 @@ const Logo = () => {
 	return (
 		<Link className="inline-flex items-center justify-center gap-1" href="/">
 			<Image src="/logo.png" width={23} height={23} alt="Analytix Logo" className="dark:invert" />
-			<span className="font-bold text-[21px] text-black dark:text-white">supametrics</span>
+			<span className="font-bold text-[22px] text-black dark:text-white">supametrics</span>
 		</Link>
 	);
 };

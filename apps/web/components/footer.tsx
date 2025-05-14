@@ -6,7 +6,7 @@ import { ModeToggle } from './mode-toggle';
 
 const Footer = () => {
 	return (
-		<footer className="py-8 px-4 flex_center">
+		<footer className="py-8 flex_center">
 			<div className="fixed_width">
 				<div className="mb-12 md:hidden">
 					<Logo />
