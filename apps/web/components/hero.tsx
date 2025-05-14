@@ -4,7 +4,7 @@ import { Badge } from './hero-badge';
 export const Hero = () => {
 	return (
 		<div className="h-[50rem] w-full flex_center">
-			<div className="w-[80%] md:w-[68%] ">
+			<div className="w-[98%] md:w-[68%] ">
 				<div className="flex justify-center">
 					<Badge text="Introducing Public Beta" />
 				</div>
@@ -12,7 +12,7 @@ export const Hero = () => {
 					<h1 className="md:px-12 tracking-[-1px] text-4xl sm:text-5xl font-bold text-black dark:text-white">
 						Open-source analytics that put <span className="text-main">*you*</span> in control
 					</h1>
-					<p className="text-base font-medium z-20 md:text-[1.3rem] mt-8 leading-[1.4rem] md:leading-[2.2rem] px-3 md:px-0 text-black dark:text-white">
+					<p className="text-[1.1rem] font-medium z-20 md:text-[1.3rem] mt-8 leading-[1.4rem] md:leading-[2.2rem]">
 						A lightweight, privacy-first alternative to Google Analytics — built for self-hosting, GDPR compliance, and
 						full data ownership. No cookies, less than 2kb, just insights.
 					</p>
