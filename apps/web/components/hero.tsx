@@ -34,7 +34,7 @@ export const Hero = () => {
 					</motion.p>
 
 					{/* Animated Buttons */}
-					<div className="mt-9 font-medium flex_center gap-2">
+					<div className="mt-9 font-medium flex flex-col gap-4 md:w-[78%] mx-auto">
 						<motion.div
 							initial={{ opacity: 0, y: 20 }}
 							animate={{ opacity: 1, y: 0 }}
@@ -42,9 +42,9 @@ export const Hero = () => {
 						>
 							<Link
 								href="/signup"
-								className="z-20 text-[0.89rem] md:text-[0.96rem] px-6 md:px-7 py-2 md:py-3 bg-black dark:bg-white text-white dark:text-black rounded-3xl hover:bg-neutral-300 dark:hover:bg-neutral-200"
+								className="z-20 text-[0.89rem] block w-full md:text-[0.96rem] px-6 md:px-7 py-2 md:py-3 bg-black dark:bg-white text-white dark:text-black rounded-3xl hover:bg-neutral-300 dark:hover:bg-neutral-200"
 							>
-								Start Now
+								Start for Free
 							</Link>
 						</motion.div>
 
@@ -55,7 +55,7 @@ export const Hero = () => {
 						>
 							<Link
 								href="/docs"
-								className="z-20 text-[0.89rem] md:text-[0.96rem] px-6 md:px-7 py-2 md:py-3 bg-white border text-black dark:bg-black text-400 rounded-3xl dark:text-zinc-500 dark:border-neutral-800 hover:bg-neutral-500 dark:hover:bg-neutral-900"
+								className="z-20 text-[0.89rem] block w-full md:text-[0.96rem] px-6 md:px-7 py-2 md:py-3 bg-white border text-black dark:bg-black text-400 rounded-3xl dark:text-zinc-500 dark:border-neutral-800 hover:bg-neutral-500 dark:hover:bg-neutral-900"
 							>
 								Documentation
 							</Link>

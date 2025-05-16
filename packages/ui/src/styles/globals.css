@@ -121,7 +121,7 @@
 		@apply flex items-center justify-between;
 	}
 	.supametrics-link {
-		@apply text-muted-foreground text-[0.87rem] hover:text-foreground dark:hover:text-foreground;
+		@apply text-neutral-600 text-[0.87rem] md:text-[0.94rem] font-medium hover:text-foreground dark:hover:text-foreground;
 	}
 }
 
