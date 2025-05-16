@@ -79,7 +79,7 @@ export const CodeBlock = ({ language, filename, code, highlightLines = [], tabs 
 				customStyle={{
 					margin: 0,
 					padding: 0,
-					background: 'transparent',
+					background: 'black',
 					fontSize: '0.875rem', // text-sm equivalent
 				}}
 				wrapLines={true}

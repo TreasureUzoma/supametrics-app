@@ -1,8 +1,8 @@
-# **Supametrics** 🚀
+# **Supametrics**
 
 Privacy-first web analytics, putting _you_ in control! A lightweight and open-source alternative to Google Analytics. Built for self-hosting, GDPR compliance, and full data ownership. ✨
 
-## 💻 Installation
+## Installation
 
 Get started with Supametrics in a few easy steps!
 
@@ -29,7 +29,7 @@ Get started with Supametrics in a few easy steps!
   pnpm dev
   ```
 
-## 🚀 Usage
+## Usage
 
 ### Setting up the environment
 
@@ -38,7 +38,7 @@ To get started, ensure you have all the necessary environment variables set up c
 <details>
 <summary>Expand for detailed instructions</summary>
 
-1.  **Create a `.env` file** in the root directory.
+1.  **Create a `.env.local` file** in the root directory.
 
 2.  **Add the following environment variables:**
 
@@ -62,15 +62,15 @@ To get started, ensure you have all the necessary environment variables set up c
 
 ![Supametrics Screenshot](https://via.placeholder.com/800x400)
 
-## ✨ Features
+## Features
 
-- 📊 **Real-time Analytics**: Track your website's performance with up-to-the-minute data.
-- 🔒 **Privacy-Focused**: GDPR compliance and no cookies for user privacy.
-- 🌐 **Self-Hosting**: Full control over your data with easy self-hosting.
-- 🚀 **Lightweight**: Less than 2KB for minimal impact on page load times.
-- 🎨 **Customizable**: Tailor the UI to match your brand and preferences.
+- **Real-time Analytics**: Track your website's performance with up-to-the-minute data.
+- **Privacy-Focused**: GDPR compliance and no cookies for user privacy.
+- **Self-Hosting**: Full control over your data with easy self-hosting.
+- **Lightweight**: Less than 2KB for minimal impact on page load times.
+- **Customizable**: Tailor the UI to match your brand and preferences.
 
-## 🛠️ Technologies Used
+## Technologies Used
 
 | Technology               | Link                                                                                                           |
 | :----------------------- | :------------------------------------------------------------------------------------------------------------- |
@@ -93,24 +93,24 @@ To get started, ensure you have all the necessary environment variables set up c
 | Typescript Eslint        | [https://typescript-eslint.io/](https://typescript-eslint.io/)                                                 |
 | only-warn                | [https://github.com/nickdecker/eslint-plugin-only-warn](https://github.com/nickdecker/eslint-plugin-only-warn) |
 
-## 🤝 Contributing
+## Contributing
 
 We welcome contributions to Supametrics UI! Here's how you can help:
 
-- 🐛 **Report Bugs**: Help us identify and fix issues.
-- 🛠️ **Suggest Features**: Propose new features and improvements.
-- ✍️ **Submit Pull Requests**: Contribute code changes to enhance the project.
+- **Report Bugs**: Help us identify and fix issues.
+- **Suggest Features**: Propose new features and improvements.
+- **Submit Pull Requests**: Contribute code changes to enhance the project.
 
-## 📜 License
+## License
 
 This project is under the [MIT License](LICENSE).
 
-## 🧑‍💻 Author Info
+## Author Info
 
-- Charles:
-  - [Website](https://example.com)
-  - [Twitter](https://twitter.com/yourtwitter)
-  - [GitHub](https://github.com/yourgithub)
+- Treasure Uzoma:
+  - [Website](https://treasurezoma.vercel.app)
+  - [Twitter](https://twitter.com/idolodev)
+  - [GitHub](https://github.com/treasureuzoma)
 
 ## 🛡️ Badges
 
