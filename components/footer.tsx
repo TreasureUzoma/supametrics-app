@@ -5,6 +5,7 @@ import {
   BrandFacebook,
   BrandLinkedin,
   BrandYoutube,
+  BrandGithub,
 } from "tabler-icons-react";
 import Logo from "./logo";
 import { ModeToggle } from "./mode-toggle";
@@ -45,6 +46,7 @@ const Footer = () => {
                           {link.name === "YouTube" && (
                             <BrandYoutube size={18} />
                           )}
+                          {link.name === "Github" && <BrandGithub size={18} />}
                           <span>{link.name}</span>
                         </a>
                       ) : (

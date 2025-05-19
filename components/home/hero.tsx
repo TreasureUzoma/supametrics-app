@@ -14,18 +14,18 @@ export const Hero = () => {
         <div className="text-center px-5 text-neutral-500 dark:text-neutral-400 md:px-0">
           {/* Animated Heading */}
           <motion.h1
-            className="md:px-12 tracking-[-1px] text-4xl sm:text-5xl font-bold text-black dark:text-white"
+            className="md:px-12 tracking-[-1px] text-5xl sm:text-5xl font-bold text-black dark:text-white"
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, ease: "easeOut" }}
           >
             Open-source analytics that put{" "}
-            <span className="text-main">*you*</span> in control
+            <mark className="text-main bg-transparent">*you*</mark> in control
           </motion.h1>
 
           {/* Animated Description */}
           <motion.p
-            className="text-[1.14rem] font-medium z-20 md:text-[1.3rem] mt-8 leading-[1.52rem] md:leading-[2.2rem]"
+            className="text-[1.13rem] font-medium z-20 md:text-[1.3rem] mt-8 leading-[1.52rem] md:leading-[2.2rem]"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.5, duration: 1 }}
@@ -44,7 +44,7 @@ export const Hero = () => {
             >
               <Link
                 href="/signup"
-                className="z-20 text-[0.89rem] block w-full md:text-[0.96rem] px-6 md:px-7 py-2 md:py-3 bg-black dark:bg-white text-white dark:text-black rounded-3xl hover:bg-neutral-300 dark:hover:bg-neutral-200"
+                className="z-20 text-base block w-full px-6 md:px-7 py-2 md:py-3 bg-black dark:bg-white text-white dark:text-black rounded-3xl hover:bg-neutral-300 dark:hover:bg-neutral-200"
               >
                 Start for Free
               </Link>
@@ -57,7 +57,7 @@ export const Hero = () => {
             >
               <Link
                 href="/docs"
-                className="z-20 text-[0.89rem] block w-full md:text-[0.96rem] px-6 md:px-7 py-2 md:py-3 bg-white border text-black dark:bg-black text-400 rounded-3xl dark:text-zinc-500 dark:border-neutral-800 hover:bg-neutral-500 dark:hover:bg-neutral-900"
+                className="z-20 text-base block w-full px-6 md:px-7 py-2 md:py-3 bg-white border text-black dark:bg-black text-400 rounded-3xl dark:text-zinc-500 dark:border-neutral-800 hover:bg-neutral-500 dark:hover:bg-neutral-900"
               >
                 Documentation
               </Link>

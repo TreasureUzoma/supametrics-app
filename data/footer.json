@@ -16,9 +16,10 @@
     { "name": "Developers", "url": "/developers" }
   ],
   "Socials": [
-    { "name": "Twitter", "url": "https://twitter.com/yourhandle" },
-    { "name": "Facebook", "url": "https://facebook.com/yourpage" },
-    { "name": "LinkedIn", "url": "https://linkedin.com/company/yourcompany" },
-    { "name": "YouTube", "url": "https://youtube.com/yourchannel" }
+    { "name": "Twitter", "url": "https://twitter.com/supametrics" },
+    { "name": "Facebook", "url": "https://facebook.com/supametrics" },
+    { "name": "LinkedIn", "url": "https://linkedin.com/company/supametrics" },
+    { "name": "YouTube", "url": "https://youtube.com/supametrics" },
+    { "name": "Github", "url": "https://github.com/supametrics" }
   ]
 }
