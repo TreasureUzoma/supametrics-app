@@ -1,0 +1,24 @@
+{
+  "Products": [
+    { "name": "Analytics", "url": "/analytics" },
+    { "name": "Link Shortener", "url": "/link-shortener" }
+  ],
+  "Resources": [
+    { "name": "Blog", "url": "/blog" },
+    { "name": "FAQs", "url": "/faqs" },
+    { "name": "Docs", "url": "/docs" }
+  ],
+  "Company": [
+    { "name": "Contact Us", "url": "/contact" },
+    { "name": "Privacy Policy", "url": "/privacy-policy" },
+    { "name": "Terms of Use", "url": "/terms" },
+    { "name": "Pricing", "url": "/pricing" },
+    { "name": "Developers", "url": "/developers" }
+  ],
+  "Socials": [
+    { "name": "Twitter", "url": "https://twitter.com/yourhandle" },
+    { "name": "Facebook", "url": "https://facebook.com/yourpage" },
+    { "name": "LinkedIn", "url": "https://linkedin.com/company/yourcompany" },
+    { "name": "YouTube", "url": "https://youtube.com/yourchannel" }
+  ]
+}
