@@ -3,7 +3,7 @@ import { InfiniteMovingCards } from "./ui/infinite-moving-cards";
 
 export const Testimonials = () => {
   return (
-    <section className="my-[4rem] flex_center">
+    <section className="my-[4.3rem] flex_center">
       <div className="fixed_width">
         <SectionHeader words="Loved by Privacy Consious Teams" />
         <p className="text-sm md:text-[1.28rem] text-center mb-7 mt-2 text-neutral-600 md:text-base/[1.375rem] dark:text-neutral-400 [&_b]:md:font-semibold [&_strong]:md:font-semibold text-center">

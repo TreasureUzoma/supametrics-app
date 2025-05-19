@@ -14,7 +14,7 @@ export const Hero = () => {
         <div className="text-center px-5 text-neutral-500 dark:text-neutral-400 md:px-0">
           {/* Animated Heading */}
           <motion.h1
-            className="md:px-12 tracking-[-1px] text-5xl sm:text-5xl font-bold text-black dark:text-white"
+            className="md:px-12 tracking-[-1px] text-4xl sm:text-5xl font-bold text-black dark:text-white"
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, ease: "easeOut" }}

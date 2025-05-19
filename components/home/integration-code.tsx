@@ -36,7 +36,8 @@ export const IntegrationDemo = () => {
               Add the Analytics Component
             </h3>
             <p className="text-sm">
-              Drop the <code>{`<Analytics client="your-tracking-id" />`}</code>{" "}
+              Drop the{" "}
+              <code className="bg-neutral-100 dark:bg-neutral-800 px-1 py-0.5 rounded">{`<Analytics client="your-tracking-id" />`}</code>{" "}
               component into your root layout.
             </p>
           </div>
@@ -52,7 +53,7 @@ export const IntegrationDemo = () => {
         </div>
         <Link
           href="/docs"
-          className="my-4 px-6 md:px-7 py-2 md:py-3 bg-white border text-black dark:bg-black text-400 rounded-3xl text-medium dark:text-zinc-500 dark:border-neutral-800 hover:bg-neutral-500 dark:hover:bg-neutral-900 p-2 text-[0.88rem] inline-block"
+          className="my-7 px-6 md:px-7 py-2 md:py-3 bg-white border text-black dark:bg-black text-400 rounded-3xl text-medium dark:text-zinc-500 dark:border-neutral-800 hover:bg-neutral-500 dark:hover:bg-neutral-900 p-2 text-[0.88rem] inline-block"
         >
           Read the documentation
         </Link>
