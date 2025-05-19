@@ -7,7 +7,7 @@ import {
   MousePointerClick,
   Zap,
 } from "lucide-react";
-import { GlowingEffect } from "./glowing-effect";
+import { GlowingEffect } from "../ui/glowing-effect";
 import { SectionHeader } from "../section-header";
 
 export function PrivacyFeatures() {
