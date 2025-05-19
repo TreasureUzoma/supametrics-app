@@ -15,12 +15,16 @@ const techLogos = [
     alt: "Next.js Logo",
   },
   {
+    src: "https://api.iconify.design/logos:nuxt.svg",
+    alt: "Nuxt.js Logo",
+  },
+  {
     src: "https://api.iconify.design/logos:wordpress-icon.svg",
     alt: "WordPress Logo",
   },
   { src: "https://api.iconify.design/logos:shopify.svg", alt: "Shopify Logo" },
-  { src: "https://api.iconify.design/logos:flutter.svg", alt: "Flutter Logo" },
-  /* {
+  /* { src: "https://api.iconify.design/logos:flutter.svg", alt: "Flutter Logo" },
+     {
     src: "https://api.iconify.design/logos:kotlin-icon.svg",
     alt: "Kotlin Logo",
   }, */

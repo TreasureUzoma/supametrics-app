@@ -54,7 +54,7 @@ export const CodeBlock = ({
     : highlightLines;
 
   return (
-    <div className="relative w-full rounded-lg border bg-white dark:bg-neutral-900 dark:border-neutral-800 p-4 font-mono text-sm">
+    <div className="relative w-full rounded-lg border bg-neutral-900 dark:border-neutral-800 p-4 font-mono text-sm">
       <div className="flex flex-col gap-2">
         {tabsExist && (
           <div className="flex overflow-x-auto">
@@ -73,7 +73,7 @@ export const CodeBlock = ({
             ))}
           </div>
         )}
-        {!tabsExist && filename && (
+        {tabsExist && filename && (
           <div className="flex justify-between items-center py-2">
             <div className="text-xs text-zinc-400">{filename}</div>
             <button

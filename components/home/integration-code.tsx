@@ -75,7 +75,7 @@ createRoot(document.getElementById('root')).render(
 );
 `;
 
-  const CSSLanguage = `import { Analytics } from "supametrics";
+  const NEXTLanguage = `import { Analytics } from "supametrics";
 
 export default function RootLayout({ children }) {
   return (
@@ -89,6 +89,60 @@ export default function RootLayout({ children }) {
 }
 `;
 
+  const NuxtLanguage = `<template>
+  <Analytics client="your-tracking-id" />
+  <NuxtPage />
+</template>
+
+<script setup>
+import { Analytics } from 'supametrics'
+</script>
+`;
+
+  const VueLanguage = `<template>
+  <div id="app">
+    <Analytics client="your-tracking-id" />
+  </div>
+</template>
+
+<script>
+import { Analytics } from 'supametrics';
+
+export default {
+  components: {
+    Analytics
+  }
+};
+</script>
+`;
+
+  const HTMLLanguage = `<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script type="module" src="https://cdn.supametrics.com/analytics.js"></script>
+  </head>
+  <body>
+    <div id="app"></div>
+    <script>
+      Supametrics.Analytics.init({ client: 'your-tracking-id' });
+    </script>
+  </body>
+</html>
+`;
+
+  const AngularLanguage = `// app.component.ts
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'app-root',
+  template: \`
+    <analytics [client]="'your-tracking-id'"></analytics>
+    <router-outlet></router-outlet>
+  \`
+})
+export class AppComponent {}
+`;
+
   return (
     <div className="max-w-3xl mx-auto w-full">
       <CodeBlock
@@ -97,15 +151,39 @@ export default function RootLayout({ children }) {
         tabs={[
           {
             name: "layout.tsx",
-            code: CSSLanguage,
+            code: NEXTLanguage,
             language: "jsx",
             highlightLines: [1, 7],
           },
           {
-            name: "App.jsx",
+            name: "main.jsx",
             code: ReactLanguage,
             language: "jsx",
             highlightLines: [3, 7],
+          },
+          {
+            name: "app.vue (Nuxt)",
+            code: NuxtLanguage,
+            language: "html",
+            highlightLines: [2],
+          },
+          {
+            name: "App.vue",
+            code: VueLanguage,
+            language: "html",
+            highlightLines: [4],
+          },
+          {
+            name: "index.html",
+            code: HTMLLanguage,
+            language: "html",
+            highlightLines: [6, 10],
+          },
+          {
+            name: "app.component.ts",
+            code: AngularLanguage,
+            language: "typescript",
+            highlightLines: [6],
           },
         ]}
       />
