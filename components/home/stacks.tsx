@@ -56,7 +56,7 @@ export const Stacks = () => {
                 width={70}
                 height={70}
                 alt={logo.alt}
-                className="mx-[4rem] mt-7 rounded-md grayscale"
+                className="mx-[3.6rem] md:mx-[4rem] mt-7 rounded-md grayscale"
               />
             ))}
           </Marquee>

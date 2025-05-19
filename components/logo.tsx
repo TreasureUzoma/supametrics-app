@@ -11,7 +11,7 @@ const Logo = () => {
         alt="Supametrics Logo"
         className="dark:invert"
       />
-      <span className="font-bold text-[22px] text-black dark:text-white">
+      <span className="font-bold text-[22.5px] text-black dark:text-white">
         supametrics
       </span>
     </Link>

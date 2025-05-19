@@ -12,7 +12,7 @@ export const Cta = () => {
             Join the movement for a more private and ethical web. Get started
             with Supametrics for free.
           </p>
-          <div className="mt-6 font-medium flex_center gap-2">
+          <div className="mt-6 font-medium flex gap-2 flex-col md:w-[65%]">
             <Link
               href="/signup"
               className="text-[0.9rem] px-6 md:px-7 py-2 md:py-3 bg-black dark:bg-white text-white dark:text-black rounded-3xl hover:bg-neutral-300 dark:hover:bg-neutral-200"
@@ -21,7 +21,7 @@ export const Cta = () => {
             </Link>
             <Link
               href="/contact"
-              className="font-medium text-[0.9rem] px-6 md:px-7 py-2 md:py-3 bg-white border text-black dark:bg-black text-400 rounded-3xl dark:text-zinc-500 dark:border-neutral-800 hover:bg-neutral-500 dark:hover:bg-neutral-900"
+              className="font-medium text-[0.9rem] px-6 md:px-7 py-2 md:py-3 bg-white border text-black dark:bg-black text-400 rounded-3xl dark:text-neutral-500 dark:border-neutral-800 hover:bg-neutral-500 dark:hover:bg-neutral-900"
             >
               Contact Sales
             </Link>
