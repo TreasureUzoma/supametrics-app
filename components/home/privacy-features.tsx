@@ -8,7 +8,7 @@ import {
   Zap,
 } from "lucide-react";
 import { GlowingEffect } from "./glowing-effect";
-import { SectionHeader } from "../../app/components/section-header";
+import { SectionHeader } from "../section-header";
 
 export function PrivacyFeatures() {
   return (
