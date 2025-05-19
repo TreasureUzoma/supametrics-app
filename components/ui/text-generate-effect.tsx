@@ -1,8 +1,9 @@
+/*  eslint-disable */
+
 "use client";
 import { useEffect } from "react";
-import { motion, stagger, useAnimate } from "motion/react";
+import { motion, stagger, useAnimate, useInView } from "framer-motion";
 import { cn } from "@/lib/utils";
-/* eslint-disable */
 
 export const TextGenerateEffect = ({
   words,
@@ -16,20 +17,27 @@ export const TextGenerateEffect = ({
   duration?: number;
 }) => {
   const [scope, animate] = useAnimate();
+  const isInView = useInView(scope, {
+    once: true,
+    margin: "0px 0px -100px 0px",
+  });
   let wordsArray = words.split(" ");
+
   useEffect(() => {
-    animate(
-      "span",
-      {
-        opacity: 1,
-        filter: filter ? "blur(0px)" : "none",
-      },
-      {
-        duration: duration ? duration : 1,
-        delay: stagger(0.2),
-      }
-    );
-  }, [scope.current]);
+    if (isInView) {
+      animate(
+        "span",
+        {
+          opacity: 1,
+          filter: filter ? "blur(0px)" : "none",
+        },
+        {
+          duration: duration ? duration : 1,
+          delay: stagger(0.2),
+        }
+      );
+    }
+  }, [isInView]);
 
   const renderWords = () => {
     return (
@@ -53,10 +61,10 @@ export const TextGenerateEffect = ({
 
   return (
     <div className={cn("font-bold", className)}>
-      <div className="mt-7 text-center">
-        <h2 className="dark:text-white text-black text-3xl md:text-4xl leading-snug tracking-wide">
+      <div className="mt-4">
+        <div className="dark:text-white text-black text-2xl leading-snug tracking-wide">
           {renderWords()}
-        </h2>
+        </div>
       </div>
     </div>
   );
