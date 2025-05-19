@@ -75,7 +75,7 @@ const Footer = () => {
         <div className="mt-6 border-t pt-4 flex justify-between items-center text-sm">
           <div className="flex_between w-full">
             <a
-              href="https://status.supametrics.coms"
+              href="https://status.supametrics.com"
               target="_blank"
               rel="noreferrer"
               className="text-green-500 flex_center gap-2"

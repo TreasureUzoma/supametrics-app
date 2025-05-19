@@ -25,7 +25,7 @@ export const Hero = () => {
 
           {/* Animated Description */}
           <motion.p
-            className="text-[1.13rem] font-medium z-20 md:text-[1.3rem] mt-8 leading-[1.52rem] md:leading-[2.2rem]"
+            className="text-[1.1rem] font-medium z-20 md:text-[1.3rem] mt-8 leading-[1.52rem] md:leading-[2.2rem]"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.5, duration: 1 }}

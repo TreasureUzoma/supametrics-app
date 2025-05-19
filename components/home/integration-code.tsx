@@ -147,7 +147,7 @@ export class AppComponent {}
     <div className="max-w-3xl mx-auto w-full">
       <CodeBlock
         language="jsx"
-        filename="DummyComponent.jsx"
+        filename="layout"
         tabs={[
           {
             name: "layout.tsx",
@@ -162,7 +162,7 @@ export class AppComponent {}
             highlightLines: [3, 7],
           },
           {
-            name: "app.vue (Nuxt)",
+            name: "app.vue",
             code: NuxtLanguage,
             language: "html",
             highlightLines: [2],
