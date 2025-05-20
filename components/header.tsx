@@ -2,7 +2,7 @@ import Logo from "./logo";
 import { ModeToggle } from "./mode-toggle";
 import Link from "next/link";
 import LinkButton from "./link-button";
-import { Icons } from "./icons";
+import { MobileNav } from "./mobile-nav";
 
 export const Header = () => {
   const navItems = [
@@ -32,13 +32,7 @@ export const Header = () => {
             </LinkButton>
             <ModeToggle />
           </div>
-          <Icons
-            type="menu"
-            width="29px"
-            height="29px"
-            color="#6B7280"
-            className="rounded-full p-1 border border-neutral-200 dark:border-neutral-800 lg:hidden"
-          />
+          <MobileNav />
         </div>
       </div>
     </header>
