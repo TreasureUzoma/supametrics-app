@@ -43,7 +43,7 @@ export const MobileNav = () => {
               </Link>
             ))}
 
-            <div className="mt-4 flex flex-col gap-3">
+            <div className="mt-4 flex flex-col gap-3 text-center">
               <LinkButton href="/login">Login</LinkButton>
               <LinkButton variant="outline" href="/register">
                 Signup
