@@ -2,7 +2,7 @@ import type { NextConfig } from "next";
 
 const DOCS_SITE = process.env.DOCS_SITE || "https://supametricsdocs.vercel.app";
 const DASHBOARD_SITE =
-  process.env.DASHBOARD_SITE || "https://supametricsapp.vercel.app/";
+  process.env.DASHBOARD_SITE || "https://supametricsapp.vercel.app";
 
 const nextConfig: NextConfig = {
   images: {
