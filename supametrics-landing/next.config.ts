@@ -1,5 +1,8 @@
 import type { NextConfig } from "next";
 
+const DOCS_SITE = process.env.DOCS_SITE || "https://supametricsdocs.vercel.app";
+const DASHBOARD_SITE = process.env.DOCS_SITE || "";
+
 const nextConfig: NextConfig = {
   images: {
     remotePatterns: [
@@ -15,12 +18,12 @@ const nextConfig: NextConfig = {
       },
       {
         protocol: "https",
-        hostname: "lh3.googleusercontent.com", // Google profile pictures
+        hostname: "lh3.googleusercontent.com",
         pathname: "/**",
       },
       {
         protocol: "https",
-        hostname: "avatars.githubusercontent.com", // GitHub profile pictures
+        hostname: "avatars.githubusercontent.com",
         pathname: "/**",
       },
     ],
@@ -28,16 +31,28 @@ const nextConfig: NextConfig = {
   async rewrites() {
     return [
       {
+        source: "/login",
+        destination: `${DASHBOARD_SITE}/login`,
+      },
+      {
+        source: "/signup",
+        destination: `${DASHBOARD_SITE}/signup`,
+      },
+      {
         source: "/docs",
-        destination: "https://supametricsdocs.vercel.app",
+        destination: `${DOCS_SITE}`,
       },
       {
         source: "/docs/:path+",
-        destination: "https://supametricsdocs.vercel.app/docs/:path+",
+        destination: `${DOCS_SITE}/docs/:path+`,
       },
       {
-        source: "/docs/_next/:path+",
-        destination: "https://supametricsdocs.vercel.app/_next/:path+",
+        source: "/docs-static/:path+",
+        destination: `${DOCS_SITE}/docs-static/:path+`,
+      },
+      {
+        source: "/dashboard-static/:path+",
+        destination: `${DASHBOARD_SITE}/dashboard-static/:path+`,
       },
     ];
   },
