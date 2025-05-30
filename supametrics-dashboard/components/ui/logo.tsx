@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 
-const Logo = () => {
+const Logo = ({ showText = true }: { showText?: boolean }) => {
   return (
     <Link
       className="inline-flex items-center justify-center gap-1"
@@ -14,9 +14,11 @@ const Logo = () => {
         alt="Supametrics Logo"
         className="dark:invert"
       />
-      <span className="font-bold text-[22.5px] text-black dark:text-white">
-        supametrics
-      </span>
+      {showText && (
+        <span className="font-bold text-[22.5px] text-black dark:text-white">
+          supametrics
+        </span>
+      )}
     </Link>
   );
 };

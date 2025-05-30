@@ -6,7 +6,6 @@ import { useState, useMemo } from "react";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import {
-  Card,
   CardContent,
   CardDescription,
   CardHeader,
@@ -32,8 +31,10 @@ export function AuthForm({
   ...props
 }: AuthFormProps) {
   const pathname = usePathname();
-  const mode = useMemo<"login" | "signup">(() => {
-    return pathname === "/signup" ? "signup" : "login";
+  const mode = useMemo<"login" | "signup" | "forgot">(() => {
+    if (pathname === "/signup") return "signup";
+    if (pathname === "/forgot-password") return "forgot";
+    return "login";
   }, [pathname]);
 
   const [name, setName] = useState("");
@@ -48,20 +49,30 @@ export function AuthForm({
   return (
     <div
       className={cn(
-        "flex flex-col items-center justify-center px-4 py-10",
+        "flex flex-col items-center justify-center md:px-4 md:py-10",
         className
       )}
       {...props}
     >
-      <Card className="md:!w-[700px] max-w-lg">
+      <div className="p-0 md:border md:p-5 md:rounded-xl md:text-card-foreground md:shadow-sm md:bg-card w-full md:w-[700px] max-w-lg md:border-1">
         <CardHeader>
-          <CardTitle className="md:text-2xl">
-            {mode === "login" ? "Login to Supametrics" : "Create a new account"}
+          <CardTitle className="text-lg md:text-2xl">
+            {
+              {
+                login: "Login to Supametrics",
+                signup: "Create a new account",
+                forgot: "Forgot your password?",
+              }[mode]
+            }
           </CardTitle>
-          <CardDescription>
-            {mode === "login"
-              ? "Enter your email below to login to your account"
-              : "Sign up with your email to get started"}
+          <CardDescription className="mb-4">
+            {
+              {
+                login: "Enter your email below to login to your account",
+                signup: "Sign up with your email to get started",
+                forgot: "We'll send you a link to reset your password",
+              }[mode]
+            }
           </CardDescription>
         </CardHeader>
         <CardContent>
@@ -93,16 +104,18 @@ export function AuthForm({
                 />
               </div>
 
-              <div className="grid gap-3">
-                <Label htmlFor="password">Password</Label>
-                <Input
-                  id="password"
-                  type="password"
-                  value={password}
-                  onChange={(e) => setPassword(e.target.value)}
-                  required
-                />
-              </div>
+              {mode !== "forgot" && (
+                <div className="grid gap-3">
+                  <Label htmlFor="password">Password</Label>
+                  <Input
+                    id="password"
+                    type="password"
+                    value={password}
+                    onChange={(e) => setPassword(e.target.value)}
+                    required
+                  />
+                </div>
+              )}
 
               {mode === "login" && (
                 <Link
@@ -114,7 +127,13 @@ export function AuthForm({
               )}
 
               <Button type="submit" className="w-full">
-                {mode === "login" ? "Login" : "Sign up"}
+                {
+                  {
+                    login: "Login",
+                    signup: "Sign up",
+                    forgot: "Send reset link",
+                  }[mode]
+                }
               </Button>
 
               {mode === "signup" && (
@@ -134,52 +153,58 @@ export function AuthForm({
                 </p>
               )}
 
-              <div className="relative text-center text-sm after:absolute after:inset-0 after:top-1/2 after:z-0 after:flex after:items-center after:border-t after:border-border">
-                <span className="relative z-10 bg-background px-2 text-muted-foreground">
-                  Or continue with
-                </span>
-              </div>
-
-              <Button
-                type="button"
-                variant="outline"
-                className="w-full flex items-center justify-center gap-2"
-                onClick={onGoogleLogin}
-              >
-                <IconBrandGoogle size={18} />
-                Continue with Google
-              </Button>
-
-              <Button
-                type="button"
-                variant="outline"
-                className="-mt-1 w-full flex items-center justify-center gap-2"
-              >
-                <IconBrandGithub size={18} />
-                Continue with GitHub
-              </Button>
-            </div>
-
-            <div className="text-center text-sm mt-6">
-              {mode === "login" ? (
+              {mode !== "forgot" && (
                 <>
-                  Don’t have an account?{" "}
-                  <Link href="/signup" className="text-main">
-                    Sign up
-                  </Link>
-                </>
-              ) : (
-                <>
-                  Already have an account?{" "}
-                  <Link href="/login" className="text-main">
-                    Log in
-                  </Link>
+                  <div className="relative text-center text-sm after:absolute after:inset-0 after:top-1/2 after:z-0 after:flex after:items-center after:border-t after:border-border">
+                    <span className="relative z-10 bg-background md:bg-card px-2 text-muted-foreground">
+                      Or continue with
+                    </span>
+                  </div>
+
+                  <Button
+                    type="button"
+                    variant="outline"
+                    className="w-full flex items-center justify-center gap-2"
+                    onClick={onGoogleLogin}
+                  >
+                    <IconBrandGoogle size={18} />
+                    Continue with Google
+                  </Button>
+
+                  <Button
+                    type="button"
+                    variant="outline"
+                    className="-mt-1 w-full flex items-center justify-center gap-2"
+                  >
+                    <IconBrandGithub size={18} />
+                    Continue with GitHub
+                  </Button>
                 </>
               )}
             </div>
+
+            {mode !== "forgot" && (
+              <div className="text-center text-sm mt-6">
+                {mode === "login" ? (
+                  <>
+                    Don’t have an account?{" "}
+                    <Link href="/signup" className="text-main">
+                      Sign up
+                    </Link>
+                  </>
+                ) : (
+                  <>
+                    Already have an account?{" "}
+                    <Link href="/login" className="text-main">
+                      Log in
+                    </Link>
+                  </>
+                )}
+              </div>
+            )}
           </form>
         </CardContent>
-      </Card>
+      </div>
     </div>
   );
 }

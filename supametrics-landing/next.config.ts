@@ -39,6 +39,26 @@ const nextConfig: NextConfig = {
         destination: `${DASHBOARD_SITE}/signup`,
       },
       {
+        source: "/forgot-password",
+        destination: `${DASHBOARD_SITE}/forgot-password`,
+      },
+      {
+        source: "/verify-otp",
+        destination: `${DASHBOARD_SITE}/verify-otp`,
+      },
+      {
+        source: "/dashboard",
+        destination: `${DASHBOARD_SITE}/dashboard`,
+      },
+      {
+        source: "/new",
+        destination: `${DASHBOARD_SITE}/new`,
+      },
+      {
+        source: "/settings",
+        destination: `${DASHBOARD_SITE}/settings`,
+      },
+      {
         source: "/docs",
         destination: `${DOCS_SITE}`,
       },

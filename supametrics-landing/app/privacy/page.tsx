@@ -3,13 +3,13 @@ import { Hero } from "@/components/shared-hero";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Terms of Use - Supametrics",
+  title: "Privacy Policy - Supametrics",
 };
 
 const Page = () => {
   return (
     <>
-      <Hero title="Terms of Use" subtitle="Last updated: 13 June, 2025" />
+      <Hero title="Privacy Pollicy" subtitle="Last updated: 13 June, 2025" />
       <main>
         <div className="max-w-5xl mx-auto px-7 py-12 text-gray-700 dark:text-gray-300">
           <section className="mb-8">
