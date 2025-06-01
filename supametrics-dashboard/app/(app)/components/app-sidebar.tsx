@@ -109,7 +109,7 @@ export function AppSidebar(props: React.ComponentProps<typeof Sidebar>) {
         <TeamSwitcher teams={data.teams} />
       </SidebarHeader>
 
-      <SidebarContent>
+      <SidebarContent className="!font-medium">
         <NavMain navLinks={data.navLinks} navMain={data.navMain} />
       </SidebarContent>
       <SidebarFooter>
