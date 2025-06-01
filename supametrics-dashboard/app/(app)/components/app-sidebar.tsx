@@ -66,14 +66,14 @@ const data = {
     },
     {
       title: "Support",
-      url: "/support",
+      url: "/contact",
       icon: LifeBuoy,
     },
   ],
   navMain: [
     {
       title: "Settings",
-      url: "#",
+      url: "/settings",
       icon: Settings2,
       items: [
         { title: "General", url: "/settinggs/general" },
@@ -87,10 +87,10 @@ const data = {
       url: "/docs",
       icon: BookOpen,
       items: [
-        { title: "Introduction", url: "#" },
-        { title: "Get Started", url: "#" },
-        { title: "Tutorials", url: "#" },
-        { title: "Changelog", url: "#" },
+        { title: "Introduction", url: "/docs/introduction" },
+        { title: "Installations", url: "/docs/introduction/installation" },
+        { title: "Setup", url: "/docs/introduction/setup" },
+        { title: "Viewing Analytics", url: "/docs/introduction/viewanalytics" },
       ],
     },
   ],

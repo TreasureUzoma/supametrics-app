@@ -168,6 +168,13 @@
   }
 }
 
+h1,
+h2,
+h3,
+h4 {
+  letter-spacing: -1px;
+}
+
 [data-active="true"] {
   background-color: #3a1f5e;
   border-radius: 7px;

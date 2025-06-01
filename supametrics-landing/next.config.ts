@@ -6,58 +6,29 @@ const DASHBOARD_SITE = process.env.DASHBOARD_SITE || "";
 const nextConfig: NextConfig = {
   images: {
     remotePatterns: [
-      {
-        protocol: "https",
-        hostname: "pbs.twimg.com",
-        pathname: "/**",
-      },
-      {
-        protocol: "https",
-        hostname: "api.iconify.com",
-        pathname: "/**",
-      },
-      {
-        protocol: "https",
-        hostname: "lh3.googleusercontent.com",
-        pathname: "/**",
-      },
-      {
-        protocol: "https",
-        hostname: "avatars.githubusercontent.com",
-        pathname: "/**",
-      },
-    ],
+      "pbs.twimg.com",
+      "api.iconify.com",
+      "lh3.googleusercontent.com",
+      "avatars.githubusercontent.com",
+    ].map((host) => ({
+      protocol: "https",
+      hostname: host,
+      pathname: "/**",
+    })),
   },
   async rewrites() {
-    return [
-      {
-        source: "/login",
-        destination: `${DASHBOARD_SITE}/login`,
-      },
-      {
-        source: "/signup",
-        destination: `${DASHBOARD_SITE}/signup`,
-      },
-      {
-        source: "/forgot-password",
-        destination: `${DASHBOARD_SITE}/forgot-password`,
-      },
-      {
-        source: "/verify-otp",
-        destination: `${DASHBOARD_SITE}/verify-otp`,
-      },
-      {
-        source: "/dashboard",
-        destination: `${DASHBOARD_SITE}/dashboard`,
-      },
-      {
-        source: "/new",
-        destination: `${DASHBOARD_SITE}/new`,
-      },
-      {
-        source: "/settings",
-        destination: `${DASHBOARD_SITE}/settings`,
-      },
+    const dashboardRoutes = [
+      "login",
+      "signup",
+      "forgot-password",
+      "verify-otp",
+      "dashboard",
+      "new",
+      "settings",
+      "ai",
+    ];
+
+    const staticRoutes = [
       {
         source: "/docs",
         destination: `${DOCS_SITE}`,
@@ -74,6 +45,14 @@ const nextConfig: NextConfig = {
         source: "/dashboard-static/:path+",
         destination: `${DASHBOARD_SITE}/dashboard-static/:path+`,
       },
+    ];
+
+    return [
+      ...dashboardRoutes.map((route) => ({
+        source: `/${route}`,
+        destination: `${DASHBOARD_SITE}/${route}`,
+      })),
+      ...staticRoutes,
     ];
   },
 };

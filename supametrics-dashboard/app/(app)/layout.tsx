@@ -8,6 +8,7 @@ import Link from "next/link";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
 import { Bell, Plus } from "lucide-react";
+import AddNewDropdown from "@/components/add-new-dropdown";
 
 export default function AppLayout({ children }: { children: React.ReactNode }) {
   return (
@@ -26,12 +27,7 @@ export default function AppLayout({ children }: { children: React.ReactNode }) {
                 <Bell />
               </Button>
             </Link>
-            <Link href="/new">
-              <Button>
-                <Plus />
-                <span className="hidden md:block pl-2">Add New</span>
-              </Button>
-            </Link>
+            <AddNewDropdown />
             <Link href="/profile">
               <Avatar>
                 <AvatarImage src="https://github.com/shadcn.png" />

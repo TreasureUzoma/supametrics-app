@@ -7,7 +7,6 @@ import {
   ArrowUpRight,
   ArrowDownRight,
   Users,
-  ExternalLink,
   FileText,
   Folder,
 } from "lucide-react";
@@ -16,7 +15,13 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import FilterDropdown from "@/components/filter";
 import { projects } from "../../../data/dummy";
 
-const filterOptions = ["All", "Active", "Disabled"];
+const filterOptions = [
+  "All",
+  "Analytics Projects",
+  "Shortened Links",
+  "Active",
+  "Disabled",
+];
 
 export default function Page() {
   const [filter, setFilter] = useState<string>("All");
@@ -131,17 +136,6 @@ export default function Page() {
                     <CardContent className="flex flex-col gap-2 text-xs text-muted-foreground">
                       <div className="flex items-center gap-1 truncate">
                         <p className="truncate">{project.url}</p>
-                        <a
-                          href={project.url}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          onClick={(e) => e.stopPropagation()}
-                          className="ml-1 inline-flex items-center text-muted-foreground hover:text-primary transition"
-                          aria-label={`Visit ${project.name}`}
-                          title={`Visit ${project.name}`}
-                        >
-                          <ExternalLink className="h-3 w-3" />
-                        </a>
                       </div>
 
                       <div className="flex items-center gap-2">
