@@ -15,13 +15,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import FilterDropdown from "@/components/filter";
 import { projects } from "../../../data/dummy";
 
-const filterOptions = [
-  "All",
-  "Analytics Projects",
-  "Shortened Links",
-  "Active",
-  "Disabled",
-];
+const filterOptions = ["All", "Active", "Disabled"];
 
 export default function Page() {
   const [filter, setFilter] = useState<string>("All");

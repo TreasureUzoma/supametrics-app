@@ -90,12 +90,12 @@ export const Form: React.FC<FormProps> = ({
   return (
     <div
       className={cn(
-        "flex flex-col items-center justify-center md:px-4 md:py-10",
+        "flex flex-col items-center justify-center px-4 md:py-10",
         className
       )}
       {...props}
     >
-      <Card className="w-full max-w-lg md:max-w-2xl shadow-md border md:rounded-xl px-5 py-8">
+      <Card className="w-full max-w-lg md:max-w-2xl shadow-md border md:rounded-xl p-2 md:px-5 md:py-8">
         <CardHeader>
           <CardTitle className="text-lg md:text-2xl">
             {titleMap[type]}

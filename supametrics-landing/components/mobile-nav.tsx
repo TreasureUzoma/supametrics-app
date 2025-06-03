@@ -44,17 +44,16 @@ export const MobileNav = () => {
           </div>
 
           <div className="mt-4 flex flex-col gap-3 text-center">
-            <LinkButton className="text-base font-medium" href="/login">
+            <LinkButton className="text-base font-medium !py-4" href="/login">
               Login
             </LinkButton>
             <LinkButton
-              className="text-base font-medium"
+              className="text-base font-medium !py-4"
               variant="outline"
               href="/signup"
             >
               Get Started
             </LinkButton>
-            <ModeToggle />
           </div>
           <nav className="flex flex-col gap-4 text-neutral-800 dark:text-neutral-200">
             {navItems.map((item, idx) => (

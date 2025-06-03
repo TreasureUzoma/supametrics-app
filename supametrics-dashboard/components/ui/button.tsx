@@ -23,10 +23,10 @@ const buttonVariants = cva(
         glow: `bg-black text-white border border-white/20 shadow-[0_0_0_1px_rgba(255,255,255,0.1)] hover:shadow-[0_0_0_2px_rgba(255,255,255,0.2),0_0_15px_rgba(255,255,255,0.3)] transition-shadow duration-300`,
       },
       size: {
-        default: "h-9 px-4 py-2 has-[>svg]:px-3",
-        sm: "h-8 rounded-md gap-1.5 px-3 has-[>svg]:px-2.5",
-        lg: "h-10 rounded-md px-6 has-[>svg]:px-4",
-        icon: "size-9",
+        default: "font-medium h-9 px-4 py-3 has-[>svg]:px-3",
+        sm: "font-medium h-8 rounded-md gap-1.5 px-3 has-[>svg]:px-2.5",
+        lg: "font-medium h-10 rounded-md px-6 has-[>svg]:px-4",
+        icon: "font-medium size-9",
       },
     },
     defaultVariants: {

@@ -13,8 +13,8 @@ export default function AddNewDropdown() {
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
         <Button>
-          <Plus className="mr-2 h-4 w-4" />
-          <span className="hidden md:inline">Add New</span>
+          <Plus className="h-4 w-4" />
+          <span className="ml-2 hidden md:inline">Add New</span>
         </Button>
       </DropdownMenuTrigger>
 

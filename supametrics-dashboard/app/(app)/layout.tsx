@@ -7,7 +7,7 @@ import {
 import Link from "next/link";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
-import { Bell, Plus } from "lucide-react";
+import { Bell } from "lucide-react";
 import AddNewDropdown from "@/components/add-new-dropdown";
 
 export default function AppLayout({ children }: { children: React.ReactNode }) {
@@ -22,7 +22,7 @@ export default function AppLayout({ children }: { children: React.ReactNode }) {
             {/* Breadcrumb goes here if passed as a slot, but we'll keep it in page */}
           </div>
           <div className="flex justify-end w-full pr-4 gap-4">
-            <Link href="reports">
+            <Link href="/reports">
               <Button variant="outline">
                 <Bell />
               </Button>
