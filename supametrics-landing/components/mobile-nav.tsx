@@ -44,11 +44,11 @@ export const MobileNav = () => {
           </div>
 
           <div className="mt-4 flex flex-col gap-3 text-center">
-            <LinkButton className="text-base font-medium !py-4" href="/login">
+            <LinkButton className="text-base font-medium !py-2" href="/login">
               Login
             </LinkButton>
             <LinkButton
-              className="text-base font-medium !py-4"
+              className="text-base font-medium !py-2"
               variant="outline"
               href="/signup"
             >
