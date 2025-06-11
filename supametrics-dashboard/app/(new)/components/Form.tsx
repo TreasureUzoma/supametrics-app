@@ -93,9 +93,8 @@ export const Form: React.FC<FormProps> = ({
         "flex flex-col items-center justify-center px-4 md:py-10",
         className
       )}
-      {...props}
-    >
-      <Card className="w-full max-w-lg md:max-w-2xl shadow-md border md:rounded-xl p-2 md:px-5 md:py-8">
+      {...props}>
+      <Card className="w-full max-w-lg md:max-w-2xl mb-20    shadow-md border md:rounded-xl p-2 md:px-5 md:py-8">
         <CardHeader>
           <CardTitle className="text-lg md:text-2xl">
             {titleMap[type]}
@@ -127,8 +126,7 @@ export const Form: React.FC<FormProps> = ({
                     <DropdownMenuTrigger asChild>
                       <Button
                         variant="outline"
-                        className="w-full justify-between"
-                      >
+                        className="w-full justify-between">
                         {formData.team || "Select Team"}
                         <ChevronDown className="ml-2 h-4 w-4 opacity-50" />
                       </Button>
@@ -140,8 +138,7 @@ export const Form: React.FC<FormProps> = ({
                           onSelect={() =>
                             setFormData((prev) => ({ ...prev, team }))
                           }
-                          className="w-full cursor-pointer"
-                        >
+                          className="w-full cursor-pointer">
                           {team}
                         </DropdownMenuItem>
                       ))}
@@ -181,8 +178,7 @@ export const Form: React.FC<FormProps> = ({
                     <DropdownMenuTrigger asChild>
                       <Button
                         variant="outline"
-                        className="w-full justify-between"
-                      >
+                        className="w-full justify-between">
                         {formData.projectType}
                         <ChevronDown className="ml-2 h-4 w-4 opacity-50" />
                       </Button>
@@ -195,8 +191,7 @@ export const Form: React.FC<FormProps> = ({
                             projectType: "Web",
                           }))
                         }
-                        className="w-full cursor-pointer"
-                      >
+                        className="w-full cursor-pointer">
                         Web
                       </DropdownMenuItem>
                     </DropdownMenuContent>
@@ -220,7 +215,7 @@ export const Form: React.FC<FormProps> = ({
               </div>
             )}
 
-            <Button type="submit" className="w-full mt-5">
+            <Button type="submit" className="w-full mt-5 mb-3">
               {type === "project" ? "Complete" : `Submit ${type}`}
             </Button>
           </form>
